@@ -5,8 +5,12 @@ int binarySearch(int *v,int value,int l,int r)
 {
     int middle=(l+r)/2;
 
+
     if(value == v[middle])
         return middle;
+
+    if(middle == l || middle == r)
+        return -1;
 
     if(v[middle]>value)
         return binarySearch(v,value,l,middle);
@@ -19,6 +23,6 @@ int main(void)
 {
     int a[5] = {1,2,3,4,5};
 
-    printf("%d\n",binarySearch(a,5,0,5));
+    printf("%d\n",binarySearch(a,1,0,5));
 
 }
