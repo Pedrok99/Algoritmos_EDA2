@@ -7,7 +7,7 @@
 #define cmpexch(A,B){if(less(B,A)) exch(A,B);}
 
 
-void insertionSort(int *v, int l, int r)
+void insertionSortSlow(int *v, int l, int r)
 {
     for(int i=l+1;i<r;i++)
         for(int j=i;j>l;j--)
@@ -23,7 +23,7 @@ int main(void)
     while(scanf("%d",&a[count])==1)
         count++;
 
-    insertionSort(a,0,count);
+    insertionSortSlow(a,0,count);
 
     for(int i=0;i<count;i++)
         printf("%d ",a[i]);
